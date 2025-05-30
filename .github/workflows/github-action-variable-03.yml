@@ -6,9 +6,14 @@ on:
   push
 
 jobs:
-  chec-kvars-context:
+  check-vars-context:
     runs-on: ubuntu:latest
     steps:
       - name: "Hello, Var_Test"
         run: echo "Hello, ${{ vars.VAR_TEST }}"
+  check-secrets-context:
+    runs-on: ubuntu:latest
+    steps:
+      - name: "Hello, secrets_Test"
+        run: echo "Hello, ${{ secrets.SECRET_TEST }}"
         
