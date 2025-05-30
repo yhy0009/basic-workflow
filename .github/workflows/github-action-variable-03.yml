@@ -3,7 +3,7 @@
 name: Test Github Action Variable 03
 run-name: Github Actions Var, secret
 on: 
-  push
+  workflow_dispatch
 
 jobs:
   check-vars-context:
