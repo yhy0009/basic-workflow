@@ -21,6 +21,7 @@ jobs:
         run: echo "result=$(echo '${{ github.event.inputs.name }}' | tr 'a-z' 'A-Z')" >> $GITHUB_OUTPUT
   
   output_data:
+    needs: input-data
     runs-on: ubuntu-latest
     steps:
       - name: Print output data
