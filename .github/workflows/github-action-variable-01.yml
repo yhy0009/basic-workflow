@@ -14,6 +14,7 @@ jobs:
       MESSAGE: Hello
     steps:
       - name: "It's Day"
+        if: ${{ env.DAY_OF_WEEK == 'Thursday' }}
         run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
         
   check-var2:
@@ -21,6 +22,3 @@ jobs:
     steps:
       - name: "It's Day"
         run: echo "$MESSAGE, Today is $DAY_OF_WEEK!"
-  
-
-  
